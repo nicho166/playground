@@ -1,0 +1,43 @@
+header {
+    padding: 10px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: blue;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    border: 2px solid black;
+    display: none;
+    position: absolute;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+h1 {
+    border: 2px solid black;
+    text-align: center;
+}
