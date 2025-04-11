@@ -1,45 +1,96 @@
-header {
-    padding: 10px;
+@media only screen and (min-width: 768px) {
+
 }
 
-ul {
-    margin: 0;
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    padding: 0 2rem;
+    background-color: steelblue;
+    display: flex;
+    align-items: baseline;
+}
+
+.header-logo {
+    color: white;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.4rem;
+}
+
+.header-logo h1 {
+    margin: 0.1rem;
+}
+
+.header-logo a:hover {
+  color: white;
+}
+
+.navigation-wrapper {
+    margin-right: auto;  
+}
+
+svg:hover {
+  fill:aqua;
+}
+
+.navigation-wrapper {
+    font-size: 1.3rem;
     padding: 0;
     display: flex;
-    gap: 10px;
+    align-items: flex-end;
+    justify-content: space-around;
 }
 
-li {
-    list-style-type: none;
-}
-
-a {
+a, a.menu-item {
     text-decoration: none;
-    color: black;
+    color: white;
+    vertical-align: middle;
+}
+
+.menu-item {
+    padding: 0 1.5rem;
+    border: white 0.5px solid;
+}
+
+.top-icon .up-icon {
+    margin-right: 2rem;
 }
 
 a:hover {
-    color: blue;
+    color: blanchedalmond;
+}
+
+a svg:hover {
+    fill:blanchedalmond;
 }
 
 .dropdown {
     position: relative;
 }
 
-.dropdown-content {
-    border: 2px solid black;
-    display: none;
-    position: absolute;
-    padding: 10px;
-    background-color: white;
+.projects-inner {
+    display:flex;
+    justify-content: space-around;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.project-card {
+  border: black 1px solid;
 }
 
-h1 {
-    border: 2px solid black;
-    text-align: center;
+main {
+    margin: 0 8rem;
 }
 
+.visual-container {
+    padding:2rem;
+    margin: 10px;
+    height:100%;
+    width: 100%;
+    border: 1px solid black;
+}

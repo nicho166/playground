@@ -1,41 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Tyler's Playground</title>
+        <title>blueStudios</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
-            <ul>
-                <div class="dropdown">
-                    <li><a href="#home">Home</a></li>
-                    <div class="dropdown-content">
-                        <li><a href="#shop">Shop</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                    </div>
+            <div class="navigation-wrapper">
+                <div class="top-icon">
+                    <a href="/">
+                      <svg class="up-icon" xmlns="http://www.w3.org/2000/svg" width="25pt" height="25pt" viewBox="0 0 50 50">
+                        <path fill="#ffffff" d="M23.074219 49.105469c-4.5625-.480469-8.210938-1.78125-11.71875-4.1875-.542969-.375-1.21875-.867188-1.511719-1.105469-.824219-.667969-2.71875-2.542969-3.425781-3.394531-2.824219-3.375-4.648438-7.46875-5.34375-11.980469-.25-1.667969-.25-5.207031 0-6.875.582031-3.761719 1.84375-6.988281 3.9375-10.113281.8125-1.21875 1.476562-2.023438 2.738281-3.304688C11.5625 4.25 16.125 1.917969 21.5625 1.074219c1.667969-.25 5.207031-.25 6.875 0 3.761719.582031 6.988281 1.84375 10.113281 3.9375 3.574219 2.394531 6.742188 6.15625 8.46875 10.0625 1.5 3.375 2.085938 6.175781 2.085938 9.925781 0 2.46875-.136719 3.730469-.667969 5.832031-1.613281 6.449219-5.730469 11.855469-11.613281 15.242188C34.5 47.40625 31.40625 48.46875 28.542969 48.90625c-1.054688.15625-4.59375.292969-5.46875.199219ZM14.207031 32.6875c.367188-.105469 1.179688-.863281 5.617188-5.28125L25 22.238281l5.082031 5.074219c5.34375 5.34375 5.523438 5.488281 6.429688 5.5.894531 0 1.175781-.167969 2.476562-1.449219.679688-.664062 1.304688-1.34375 1.386719-1.5.230469-.4375.292969-1.25.144531-1.8125-.125-.46875-.59375-.957031-7.070312-7.457031C29.375 16.5 26.332031 13.542969 26.09375 13.40625c-.574219-.3125-1.613281-.300781-2.1875 0-.238281.136719-3.269531 3.09375-7.300781 7.136719C9.011719 28.15625 9.28125 27.832031 9.40625 29c.03125.3125.125.699219.207031.855469.292969.539062 2.5 2.644531 2.949219 2.800781.5.175781 1.082031.199219 1.644531.03125Zm0 0"/>
+                      </svg>
+                    </a>
                 </div>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+                <div class="menu-item">
+                    <a href="#about">About</a>
+                </div>
+                <div class="menu-item">
+                    <a href="#projects">Projects</a>
+                </div>
+                <div class="menu-item">
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="header-logo">
+                <h1>
+                    <a href="/">blueStudios.</a>
+                </h1>
+            </div>
         </header>
         <main>
-            <h1 id="header">Tyler's Playground</h1>
-            <button onclick="changeColor()">Press me</button>
-            <table>
-                <tr>
-                    <th>Header 1</th>
-                    <th>Header 2</th>
-                </tr>
-                <tr>
-                    <td>123</td>
-                    <td>456</td>
-                </tr>
-            </table>
-            <label for="first_name">First Name:</label>
-            <input type="text" id="first_name">
-            <button class="greet-btn">Greet Me</button>
-            <h2 class="greeting"></h2>
+            <div class="visual-container" id="motion">
+              
+            </div>
+            <div id="main-banner">
+                <img src="" alt=""/>
+                <h1>Banner</h1>
+            </div>
+            <div id="about">
+                <p class="about-content">
+                    Donec ultrices faucibus metus in laoreet. Pellentesque habitant morbi 
+                    tristique senectus et netus et malesuada fames ac turpis egestas. Fusce a 
+                    neque erat. Nam vehicula, eros a cursus pretium, risus est pulvinar magna, 
+                    malesuada condimentum ligula eros et arcu. Phasellus dignissim eu erat vel tempus. 
+                    Vivamus tempor euismod velit non maximus. Nunc faucibus tellus quis magna varius 
+                    porttitor pellentesque ut urna. Integer erat velit, commodo ut lorem in, ultricies 
+                    accumsan ante. Proin interdum tortor vel dolor mollis vestibulum. <br/>
+                    <br/>
+                    Suspendisse consequat volutpat sagittis. Quisque et lectus et ante 
+                    accumsan sagittis vel quis ipsum. Nulla id porta libero, ac elementum 
+                    diam. Nullam vehicula ipsum dolor, in porttitor lacus molestie vitae. 
+                    Praesent cursus orci augue, sit amet posuere odio commodo eget. Nulla 
+                    lobortis ipsum eu eros posuere sodales. Maecenas quis auctor ipsum. 
+                    Fusce neque enim, suscipit eget massa at, vestibulum auctor libero.
+                    Nunc ornare dignissim erat, id mollis risus egestas a. Donec non est 
+                    fringilla, porttitor risus nec, rutrum dui. Quisque nec felis quis 
+                    magna tempus pellentesque. Proin ut iaculis dolor, quis pellentesque 
+                    nibh. Etiam pulvinar sem id est porta, id rhoncus dui iaculis. Donec 
+                    at vulputate risus. <br/>
+                    <br/>
+                    Curabitur commodo congue risus, sit amet sagittis risus cursus in. 
+                    Vestibulum efficitur mauris vitae erat hendrerit finibus. In lectus 
+                    elit, porttitor eget sollicitudin ut, venenatis at risus. Nam pharetra 
+                    dignissim volutpat. Phasellus finibus dictum facilisis. Donec cursus 
+                    augue rhoncus odio cursus, sed scelerisque felis accumsan. Mauris 
+                    consectetur in leo bibendum blandit. Nulla nulla augue, cursus eu 
+                    pulvinar in, laoreet sit amet quam. Maecenas congue mauris eget tortor 
+                    posuere facilisis. Phasellus tempor ipsum vulputate porta scelerisque.
+                </p>
+            </div>
+            <div id="projects">
+              <div class="projects-inner">
+                <div class="project-card">
+                  <h3 class="card-1">Project 1</h3>
+                </div>
+                <div class="project-card">
+                  <h3 class="card-1">Project 2</h3>
+                </div>
+                <div class="project-card">
+                  <h3 class="card-1">Project 3</h3>  
+                </div>
+                <div class="project-card">
+                  <h3 class="card-1">Project 4</h3>
+                </div>
+              </div>
+            </div>
+            <div id="contact">
+                <h1>Contact</h1>
+            </div>
         </main>
         <script src="script.js"></script>
     </body>
