@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const h1 = visualContainer.querySelector('h1');
     visualContainer.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent the default anchor behavior
+        
         h1.style.color = 'green';
     });
 });
