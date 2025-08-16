@@ -24,33 +24,43 @@ button.addEventListener("click", () => {
 /* JS for my moving red dot */
 const container = document.querySelector('.visual-container');
 const dot = document.querySelector('#dot');
-const step = '5px';
+const step = 5;
+
+let topPos = 0;
+let leftPos = 0;
 
 const keys = {
-    ArrowUp: 'false',
-    ArrowDown: 'false',
-    ArrowLeft: 'false',
-    ArrowRight: 'false'
+    ArrowUp: false,
+    ArrowDown: false,
+    ArrowLeft: false,
+    ArrowRight: false
 };
 
 window.addEventListener('keydown', (event) => {
   if (keys.hasOwnProperty(event.key)){
-    keys[event.key] = 'true';
+    keys[event.key] = true;
     moveDot(event);
   }
 });
 
 window.addEventListener('keyup', (event) => {
   if (keys.hasOwnProperty(event.key)){
-    keys[event.key] = 'false'
+    keys[event.key] = false
   }
 });
 
 function moveDot(event){
   if (event.key === 'ArrowUp'){
-    dot.style.top = '0px';
+    topPos -= step;
   } else if (event.key === 'ArrowDown'){
-    dot.style.top = `100px`;
+    topPos += step;
+  } else if (event.key === 'ArrowLeft') {
+    leftPos -= step;
+  } else if (event.key === 'ArrowRight') {
+    leftPos += step;
   }
+
+  dot.style.top = `${topPos}px`
+  dot.style.left = `${leftPos}px`
 }
 
