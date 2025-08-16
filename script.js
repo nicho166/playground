@@ -4,12 +4,12 @@ const button = document.querySelector("#submit");
 const toDoList = document.querySelector("#to-do-list");
 
 function addLineThrough(el){
-  el.style.textDecoration = 'line-through';
+  el.style.textDecoration = 
+    el.style.textDecoration === 'line-through' ? 'none' : 'line-through';
 }
 
 button.addEventListener("click", () => {
   const text = input.value.trim();
-
   if (text){
     const item = document.createElement("li");
     item.textContent = text;
