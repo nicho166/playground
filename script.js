@@ -1,3 +1,27 @@
+/* Practicing nest scope */
+
+function varScoping() {
+  var x = 1;
+  if (true) {
+    var x = 2; // Modifies the same 'x' variable
+    console.log(x); // Output: 2
+  }
+  console.log(x); // Output: 2 (because var is function-scoped)
+}
+
+function letScoping() {
+  let x = 1;
+  if (true) {
+    let x = 2; // Creates a new 'x' variable within the if block
+    console.log(x); // Output: 2
+  }
+  console.log(x); // Output: 1 (the original 'x' variable)
+}
+
+varScoping();
+letScoping();
+
+
 /* JS for my to-do list */
 const input = document.querySelector("#list-input");
 const button = document.querySelector("#submit");
