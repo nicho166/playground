@@ -1,4 +1,27 @@
-/* Practicing nest scope */
+/* Guess the number game */
+const submitButton = document.querySelector('#submit-guess')
+const guess = document.querySelector('#number-guess');
+const responseP = document.querySelector('.result')
+
+function onSubmit(){
+  const guessInput = Number(guess.value.trim());
+  const randomNum = Math.floor(Math.random() * 10);
+  
+  if (guessInput < 0 || guessInput > 10) {
+    responseP.textContent = 'Please enter a value between 1 and 10';
+  } else if (guessInput === randomNum) {
+    responseP.textContent = `Congrats, you win! The number was ${randomNum}`
+  } else {
+    responseP.textContent = `You lose, the number was ${randomNum}.`
+  }
+  guess.value = '';
+}
+
+submitButton.addEventListener('click', onSubmit) 
+
+
+
+/* Practicing nest scope 
 
 function varScoping() {
   var x = 1;
@@ -20,8 +43,7 @@ function letScoping() {
 
 varScoping();
 letScoping();
-
-
+*/
 /* JS for my to-do list */
 const input = document.querySelector("#list-input");
 const button = document.querySelector("#submit");
