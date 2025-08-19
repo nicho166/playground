@@ -1,3 +1,47 @@
+/* Countdown Timer */
+const START_FROM = 10;
+const clock = document.querySelector('.time h1');
+const startTimer = document.querySelector('#start-time');
+
+
+let timerId = null; 
+let current = START_FROM;
+
+
+function render(value) {
+  clock.textContent = String(value);
+}
+
+
+function clearTimer() {
+  if (timerId !== null) {
+    clearInterval(timerId);
+    timerId = null;
+  }
+}
+
+
+function startCountdown() {
+  if (timerId !== null) return; 
+
+  current = START_FROM;
+  render(current);
+  startTimer.disabled = true;
+
+
+  timerId = setInterval(() => {
+    current -= 1;
+    render(current);
+    console.log(timerId)
+      if (current <= 0) {
+        clearTimer();
+        startTimer.disabled = false;
+      }
+    }, 1000);
+}
+
+startTimer.addEventListener('click', startCountdown);
+
 /* Guess the number game */
 const submitButton = document.querySelector('#submit-guess');
 const guess = document.querySelector('#number-guess');
