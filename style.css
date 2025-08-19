@@ -7,6 +7,8 @@ body {
     padding: 0px;
 }
 
+/* header styles */
+
 header {
     padding: 0 2rem;
     background-color: steelblue;
@@ -32,19 +34,12 @@ header {
 }
 
 .navigation-wrapper {
-    margin-right: auto;  
-}
-
-svg:hover {
-  fill:aqua;
-}
-
-.navigation-wrapper {
     font-size: 1.3rem;
     padding: 0;
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
+    margin-left: auto;  
 }
 
 a, a.menu-item {
@@ -53,40 +48,60 @@ a, a.menu-item {
     vertical-align: middle;
 }
 
-.menu-item {
-    padding: 0 1.5rem;
-    border: white 0.5px solid;
+.project-item > a {
+    color: steelblue;
 }
 
-.top-icon .up-icon {
-    margin-right: 2rem;
+.project-item > a:hover {
+    color: black;
+}
+
+.menu-item {
+    display: flex;
+    position: relative;
+    padding: 0.5rem 1.5rem;
+    height:2rem;
+}
+
+.dropdown-menu {
+    display: none;
+    font-size: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem;
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown > a {
+  display:flex;
 }
 
 a:hover {
     color: blanchedalmond;
 }
 
-a svg:hover {
-    fill:blanchedalmond;
-}
-
 .dropdown {
     position: relative;
 }
 
-.projects-inner {
-    display:flex;
-    justify-content: space-around;
-}
-
-.project-card {
-  border: black 1px solid;
-}
+/* main page styles */
 
 main {
     margin: 0 8rem;
     display:flex;
+    justify-content: center;
 }
+
+/* dot on canvas styles */
 
 .visual-container {
     padding:2rem;
@@ -104,9 +119,11 @@ main {
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  top: 145px;
-  left: 145px;
+  top: 0px;
+  left: 0px;
 }
+
+/* to-do styles */
 
 .to-do {
     width: 50vw;
