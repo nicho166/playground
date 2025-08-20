@@ -1,10 +1,62 @@
 /* Stopwatch with start/stop/reset (closure tracks time). 
 
-
+1. respond to click on start button
+2. call function to start interval
+3. in interval, call function to render time and increment time
+4. respond to stop to set interval id to null to stop interval
+5.respond to reset button to clear ui
 
 */
 
+const startButton = document.querySelector('#start');
+const stopButton = document.querySelector('#stop');
+const resetButton = document.querySelector('#reset');
+const stopwatchTime = document.querySelector('h1#time');
 
+const stopwatch = (function () {
+  let stopwatchId = null;
+  let currentTime = 0;
+
+  function renderTime (value) {
+    stopwatchTime.textContent = value;
+  }
+
+  return {
+    start(){
+      if (stopwatchId !== null) return;
+    
+      renderTime(currentTime);
+      startButton.disabled = true;
+      stopButton.disabled = false;
+
+      stopwatchId = setInterval(() => {
+        currentTime += 1;
+        renderTime(currentTime);
+    }, 1000);
+    },
+    stop(){
+      if (stopwatchId !== null){
+        clearInterval(stopwatchId);
+        stopwatchId = null;
+        stopButton.disabled = true;
+        startButton.disabled = false;
+      }
+    },
+    reset(){
+      clearInterval(stopwatchId);
+      currentTime = 0;
+      stopwatchId = null;
+      renderTime(currentTime);
+      stopButton.disabled = false;
+      startButton.disabled = false;
+    }
+  }
+
+})();
+
+startButton.onclick = stopwatch.start;
+stopButton.onclick = stopwatch.stop;
+resetButton.onclick = stopwatch.reset;
 
 
 /* Countdown Timer 
