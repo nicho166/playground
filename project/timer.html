@@ -4,7 +4,7 @@
     <title>playground</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
@@ -48,48 +48,18 @@
       </div>
     </header>
     <main>
-    <div class="banner">
-      <h1>Welcome!</h1>
+    <div class="timer">
+      <div class="stop-watch">
+        <h1>Time:</h1>
+        <h1 id="time">0</h1>
+      </div>
+      <div class="controls">
+        <button id="start">START</button>
+        <button id="stop">STOP</button>
+        <button id="reset">RESET</button>
+      </div>
     </div>
     </main>
-    <script src="script.js"></script>
-    <script>
-      function makeAdder(add){
-        return (inner) => {
-          return add + inner;
-        };
-      };
-
-      const addOne = makeAdder(1);
-      const addTwo = makeAdder(2);
-
-      console.log(addOne(2));
-      console.log(addTwo(2));
-
-      const counter = (function () {
-        let privateCounter = 0;
-        function changeBy(val){
-          privateCounter += val;
-        }
-
-        return {
-           increment(){
-            changeBy(1);
-          },
-          decrement(){
-            changeBy(-1);
-          },
-          value(){
-            return privateCounter;
-          }
-        }
-      })();
-
-      console.log(counter.increment());
-      console.log(counter.increment());
-      console.log(counter.increment());
-      console.log(counter.decrement());
-      console.log(counter.value());
-    </script>
+    <script src="../script.js"></script>
   </body>
 </html>

@@ -138,3 +138,17 @@ main {
 .input-container {
     display: flex;
 }
+
+/* timer styles */
+
+.timer {
+    padding:2rem 0rem;
+}
+
+.stop-watch {
+    display:flex;
+}
+
+h1#time {
+  margin-left: 10px;
+}

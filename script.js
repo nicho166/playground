@@ -1,4 +1,13 @@
-/* Countdown Timer */
+/* Stopwatch with start/stop/reset (closure tracks time). 
+
+
+
+*/
+
+
+
+
+/* Countdown Timer 
 const START_FROM = 10;
 const clock = document.querySelector('.time h1');
 const startTimer = document.querySelector('#start-time');
@@ -41,8 +50,8 @@ function startCountdown() {
 }
 
 startTimer.addEventListener('click', startCountdown);
-
-/* Guess the number game */
+*/
+/* Guess the number game 
 const submitButton = document.querySelector('#submit-guess');
 const guess = document.querySelector('#number-guess');
 const responseP = document.querySelector('.result');
@@ -70,8 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-
-/* JS for my to-do list */
+*/
+/* JS for my to-do list 
 const input = document.querySelector("#list-input");
 const button = document.querySelector("#submit");
 const toDoList = document.querySelector("#to-do-list");
@@ -99,8 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 });
-
-/* JS for my moving red dot */
+*/
+/* JS for my moving red dot
 const container = document.querySelector('.visual-container');
 const dot = document.querySelector('#dot');
 const step = 5;
@@ -142,7 +151,7 @@ window.addEventListener('keyup', (event) => {
     keys[event.key] = false
   }
 });
-
+ */
 /* Practicing nest scope 
 
 function varScoping() {
