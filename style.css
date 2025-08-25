@@ -152,3 +152,16 @@ main {
 h1#time {
   margin-left: 10px;
 }
+
+/* quote generator styles */
+
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.quote {
+    height: 2rem;
+    width: 50vw;
+}

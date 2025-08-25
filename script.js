@@ -1,12 +1,36 @@
+/* Quote Generatpr */
+
+const quotes = [
+  "He who has a why to live can bear almost any how.",
+  "That which does not kill us makes us stronger.",
+  "In heaven, all the interesting people are missing.",
+  "The man of knowledge must be able not only to love his enemies but also to hate his friends.",
+  "The individual has always had to struggle to keep from being overwhelmed by the tribe.",
+  "There are no facts, only interpretations.",
+  "Man is the cruelest animal.",
+  "You must have chaos within you to give birth to a dancing star.",
+  "The surest way to corrupt a youth is to instruct him to hold in higher esteem those who think alike than those who think differently.",
+  "Sometimes people don’t want to hear the truth because they don’t want their illusions destroyed."
+];
+
+const generateQuote = document.querySelector("#get-quote");
+const quoteContainer = document.querySelector(".quote");
+
+function renderUi(quote) {
+  quoteContainer.textContent = quote;
+}
+
+function getRandomQuote() {
+  let index = Math.floor(Math.random()* quotes.length)
+  renderUi(quotes[index]);
+}
+
+generateQuote.onclick = getRandomQuote
+
+
 /* Stopwatch with start/stop/reset (closure tracks time). 
 
-1. respond to click on start button
-2. call function to start interval
-3. in interval, call function to render time and increment time
-4. respond to stop to set interval id to null to stop interval
-5.respond to reset button to clear ui
 
-*/
 
 const startButton = document.querySelector('#start');
 const stopButton = document.querySelector('#stop');
@@ -57,7 +81,7 @@ const stopwatch = (function () {
 startButton.onclick = stopwatch.start;
 stopButton.onclick = stopwatch.stop;
 resetButton.onclick = stopwatch.reset;
-
+*/
 
 /* Countdown Timer 
 const START_FROM = 10;
