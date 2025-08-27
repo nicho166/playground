@@ -57,6 +57,27 @@
     </main>
     <script src="script.js"></script>
     <script>
+      // Reverse String
+      const string = "tyler"
+      const palindrome = "kayak"
+
+      function reverseString(s){
+        return s.split("").reverse().join("");
+      }
+
+      // Check Palindrome
+      function checkPalindrome(s) {
+        const clean = s.toLowerCase().replace(/[^a-z0-9]/g, "");
+        const reverseS = reverseString(clean);
+
+        return reverseS === clean;
+      };
+
+      if (checkPalindrome("Race car")) {
+        console.log("Palindrome!");
+      } else {
+        console.log("Not a palindrome.");
+      };
     </script>
   </body>
 </html>

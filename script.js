@@ -1,4 +1,4 @@
-/* Quote Generatpr */
+/* Quote Generatpr 
 
 const quotes = [
   "He who has a why to live can bear almost any how.",
@@ -27,7 +27,7 @@ function getRandomQuote() {
 
 generateQuote.onclick = getRandomQuote
 
-
+*/
 /* Stopwatch with start/stop/reset (closure tracks time). 
 
 
