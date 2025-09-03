@@ -48,6 +48,9 @@
         <div class="menu-item">
           <a href="#contact">Contact</a>
         </div>
+        <div class="profile-icon">
+          <img src="">
+        </div>
       </div>
     </header>
     <main>
@@ -73,11 +76,11 @@
         return reverseS === clean;
       };
 
-      if (checkPalindrome("Race car")) {
-        console.log("Palindrome!");
-      } else {
-        console.log("Not a palindrome.");
-      };
+      //if (checkPalindrome("Race car")) {
+      //  console.log("Palindrome!");
+      //} else {
+      //  console.log("Not a palindrome.");
+      //};
 
       // Flatten Array
 
@@ -86,8 +89,6 @@
           (acc, val) => acc.concat(Array.isArray(val) ? flattenDeepReduce(val) : val),
           []
         );
-
-      console.log(flattenDeepReduce([1, [2, [3, 4]], 5]));
       
       // Find Highest Value
       let array = [1,2,31,25,55,2,3,14,100]
@@ -95,9 +96,6 @@
       function getHighest(arr) {
         return arr.reduce((max, val) => (val > max ? val : max), arr[0]);
       }
-
-      console.log(getHighest(array))
-
     </script>
   </body>
 </html>

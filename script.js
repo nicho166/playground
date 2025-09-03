@@ -1,4 +1,18 @@
-/* Quote Generatpr 
+class User {
+  constructor(name){
+    this.name = name;
+  }
+
+  sayHi() {
+    console.log(`Hello, ${this.name}!`)
+  }
+}
+
+const tyler = new User('Tyler');
+
+tyler.sayHi();
+
+/* Quote Generator 
 
 const quotes = [
   "He who has a why to live can bear almost any how.",
