@@ -1,16 +1,31 @@
 class User {
-  constructor(name){
+  age
+  profileImage
+  constructor(name, email){
     this.name = name;
+    this.email = email;
   }
 
-  sayHi() {
-    console.log(`Hello, ${this.name}!`)
+  toggleProfileCard = () => {
+    const overlay = document.querySelector('.overlay');
+
+    overlay.classList.remove('hidden');
+
+    const close = overlay.querySelector('.close-modal');
+    
+    close.addEventListener('click', () => {
+      overlay.classList.add('hidden');
+    })
   }
 }
 
-const tyler = new User('Tyler');
+const tyler = new User('Tyler', 'tyler.n.nicholson@gmail.com');
+tyler.age = 30;
+tyler.profileImage = 'assets/profile_pic.jpeg';
 
-tyler.sayHi();
+const profilePic = document.querySelector('#profile-img')
+
+profilePic.addEventListener('click', tyler.toggleProfileCard);
 
 /* Quote Generator 
 
