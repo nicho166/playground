@@ -192,15 +192,21 @@ h1#time {
 }
 
 .profile-card {
-  height:50vh;
+  display: flex;
+  align-items: center;;
   width:50vw;
   background-color: white;
   border-radius: 5px;
   position:relative;
+  padding: 10px;
 }
 
-.profile-card .image {
-    
+div.image {
+    display: contents;
+}
+
+.user-info {
+    margin-left:1rem;
 }
 
 .close-modal {
