@@ -1,32 +1,3 @@
-class User {
-  age
-  profileImage
-  constructor(name, email){
-    this.name = name;
-    this.email = email;
-  }
-
-  toggleProfileCard = () => {
-    const overlay = document.querySelector('.overlay');
-
-    overlay.classList.remove('hidden');
-
-    const close = overlay.querySelector('.close-modal');
-    
-    close.addEventListener('click', () => {
-      overlay.classList.add('hidden');
-    })
-  }
-}
-
-const tyler = new User('Tyler', 'tyler.n.nicholson@gmail.com');
-tyler.age = 30;
-tyler.profileImage = 'assets/profile_pic.jpeg';
-
-const profilePic = document.querySelector('#profile-img')
-
-profilePic.addEventListener('click', tyler.toggleProfileCard);
-
 /* Quote Generator 
 
 const quotes = [
@@ -280,3 +251,99 @@ function letScoping() {
 varScoping();
 letScoping();
 */
+
+/*
+
+// Reverse String
+const string = "tyler"
+const palindrome = "kayak"
+
+function reverseString(s){
+  return s.split("").reverse().join("");
+}
+
+// Check Palindrome
+function checkPalindrome(s) {
+  const clean = s.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const reverseS = reverseString(clean);
+
+  return reverseS === clean;
+};
+
+//if (checkPalindrome("Race car")) {
+//  console.log("Palindrome!");
+//} else {
+//  console.log("Not a palindrome.");
+//};
+
+// Flatten Array
+
+const flattenDeepReduce = (arr) =>
+  arr.reduce(
+    (acc, val) => acc.concat(Array.isArray(val) ? flattenDeepReduce(val) : val),
+    []
+  );
+
+// Find Highest Value
+let array = [1,2,31,25,55,2,3,14,100]
+
+function getHighest(arr) {
+  return arr.reduce((max, val) => (val > max ? val : max), arr[0]);
+}
+*/
+
+const users = [
+  {
+    email: 'tyler.n.nicholson@gmail.com',
+    password: '20_Five!'
+  },
+  {
+    email: 'lcpolce@gmail.com',
+    password: 'pineapple20'
+  }
+]
+
+function verifyUser(email, password) {
+  const user = users.find(u => u.email === email && u.password === password);
+  return user ? true : false;
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const userEmail = document.querySelector('input#email').value;
+  const userPassword = document.querySelector('input#password').value;
+
+  console.log(verifyUser(userEmail, userPassword));
+
+}
+
+class User {
+  age
+  profileImage
+  constructor(name, email){
+    this.name = name;
+    this.email = email;
+  }
+
+  renderUserInfo = () => {
+    
+  }
+
+  toggleProfileCard = () => {
+    const overlay = document.querySelector('.overlay');
+    overlay.classList.remove('hidden');
+
+    const close = overlay.querySelector('.close-modal');
+    close.addEventListener('click', () => {
+      overlay.classList.add('hidden');
+    })
+  }
+}
+
+const tyler = new User('Tyler', 'tyler.n.nicholson@gmail.com');
+tyler.age = 30;
+tyler.profileImage = 'assets/profile_pic.jpeg';
+
+const profilePic = document.querySelector('#profile-img')
+
+profilePic.addEventListener('click', tyler.toggleProfileCard);

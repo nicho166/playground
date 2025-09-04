@@ -54,61 +54,46 @@
       </div>
     </header>
     <main>
-    <div class="banner">
-      <h1>Welcome!</h1>
+    <div id="login-form">
+      <form class="login-form">
+        <h2>Login</h2>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="you@example.com" 
+            required 
+          />
+        </div>
+        <div class="form-field">
+          <label for="password">Password</label>
+          <input 
+            type="password" 
+            id="password"
+            name="password" 
+            placeholder="Enter your password" 
+            required 
+          />
+        </div>
+        <button type="submit" onclick="handleSubmit(event)">Login</button>
+      </form>
     </div>
     <div class="overlay hidden">
       <div class="profile-card">
         <div class="close-modal">Close</div>
         <div class="image">
-          <img src="assets/profile_pic.jpeg" alt="my beautiful face" height="30%" width="30%">
+          <img class="profile-img" src="assets/profile_pic.jpeg" alt="my beautiful face" height="30%" width="30%">
         </div>
         <div class="user-info">
-          <p class="h2">Name: Tyler</p>
-          <p class="h2">Age: 30</p>
-          <p class="h2">Email: tyler.n.nicholson@gmail.com</p>
+          <p class="profile-name">Name: </p>
+          <p class="profile-age">Age: </p>
+          <p class="profile-email">Email: </p>
         </div>
       </div>
     </div>
     </main>
     <script src="script.js"></script>
-    <script>
-      // Reverse String
-      const string = "tyler"
-      const palindrome = "kayak"
-
-      function reverseString(s){
-        return s.split("").reverse().join("");
-      }
-
-      // Check Palindrome
-      function checkPalindrome(s) {
-        const clean = s.toLowerCase().replace(/[^a-z0-9]/g, "");
-        const reverseS = reverseString(clean);
-
-        return reverseS === clean;
-      };
-
-      //if (checkPalindrome("Race car")) {
-      //  console.log("Palindrome!");
-      //} else {
-      //  console.log("Not a palindrome.");
-      //};
-
-      // Flatten Array
-
-      const flattenDeepReduce = (arr) =>
-        arr.reduce(
-          (acc, val) => acc.concat(Array.isArray(val) ? flattenDeepReduce(val) : val),
-          []
-        );
-      
-      // Find Highest Value
-      let array = [1,2,31,25,55,2,3,14,100]
-
-      function getHighest(arr) {
-        return arr.reduce((max, val) => (val > max ? val : max), arr[0]);
-      }
-    </script>
   </body>
 </html>
